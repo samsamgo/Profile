@@ -1,37 +1,22 @@
-import React, { useRef } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Mainpage() {
-  const videoRef = useRef(null);
   return (
     <>
       <Maindiv>
-        <div
-          style={{
-            position: "relative",
-            height: "100vh",
-            overflow: "hidden",
-          }}
-        >
-          <iframe
-            ref={videoRef}
-            title="Lofi Hip Hop Beats"
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/r0z8pE9Ix9M?start=7570&autoplay=1&mute=1&loop=1&playlist=r0z8pE9Ix9M"
-            frameBorder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "100%",
-              height: "100%",
-            }}
-          />
-        </div>
+        <Namediv>
+          <div>Front - end</div>
+          <div>개발자</div>
+          <div>장경욱입니다.</div>
+
+          <Link to="/mypage/">
+            <Buttondiv>
+              <clickdiv>Click</clickdiv>
+            </Buttondiv>
+          </Link>
+        </Namediv>
       </Maindiv>
     </>
   );
@@ -44,5 +29,64 @@ const Maindiv = styled.div`
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: aqua;
+  background-image: url("https://blog.kakaocdn.net/dn/J44vH/btrHDPbdBUF/GueWl38q2JsflckrNeXqnK/img.gif");
+  background-size: cover;
+  color: white;
+  align-items: center;
+  padding: 10% 10%;
+`;
+
+const Namediv = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  animation: appearance 6s forwards;
+  text-decoration: none;
+  div {
+    font-family: "Gowun Batang", serif;
+    font-size: 80px;
+  }
+  @keyframes appearance {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+const Buttondiv = styled.div`
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px lightgray;
+  border-style: solid dashed;
+  margin: 50px 0px 0px 0px;
+  outline: none;
+  cursor: pointer;
+  animation: showHide 2s linear infinite;
+  @keyframes showHide {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  clickdiv {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    top: 25%;
+    left: 14%;
+  }
+  :hover {
+    animation: pulse 2s infinite;
+  }
 `;

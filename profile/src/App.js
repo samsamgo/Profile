@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./Page/Mainpage";
+import Mypage from "./Page/Mypage";
 
 import { createGlobalStyle } from "styled-components";
 
@@ -8,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
-    /* font-family: 'exo'; */
+
   }
 `;
 
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />}></Route>
+          <Route path="/mypage/" element={<Mypage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
