@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
 import yadon from "../Asset/yadonchis.png";
 
+import Intro from "./Intro";
+
 function Mypage() {
   const videoId = "XS-hdOnxeKQ";
   const youtubeUrl = `https://www.youtube.com/embed/${videoId}`;
@@ -95,6 +97,10 @@ function Mypage() {
             <span>Location</span>
           </boxdiv>
         </Buttondiv>
+        {active === "Intro" && <Intro />}
+        {active === "Pro" && <div>123123</div>}
+        {active === "Video" && <div>123123</div>}
+        {active === "Loca" && <div>123123</div>}
       </Myprofile>
     </Mypagediv>
   );
@@ -123,6 +129,7 @@ const Buttondiv = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0px 3%;
+  cursor: pointer;
   boxdiv {
     position: relative;
     width: 10%;
@@ -156,6 +163,7 @@ const Myprofile = styled.div`
   display: flex;
   flex-direction: column;
   padding: 5px 5px;
+  align-items: center;
 `;
 
 const Intorducediv = styled.div`
@@ -177,10 +185,10 @@ const Intorducediv = styled.div`
     align-items: center;
     img {
       position: absolute;
-      top: 7px;
-      left: 7px;
-      width: 120px;
-      height: 120px;
+      top: 5px;
+      left: 4px;
+      width: 125px;
+      height: 125px;
       border-radius: 50%;
     }
   }
