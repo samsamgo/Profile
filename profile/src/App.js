@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import MainPage from "./Page/Mainpage";
 import Mypage from "./Page/Mypage";
-import Intro from "./Page/Intro";
 
 import { createGlobalStyle } from "styled-components";
 

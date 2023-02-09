@@ -115,7 +115,7 @@ const Mypagediv = styled.div`
   height: 100vh;
   background-image: ${({ background }) => ` url(${background})` || "white"};
   background-size: cover;
-  padding: 5% 15%;
+  padding: 5% 13%;
   transition: background-image 2s ease-in-out;
   justify-content: center;
   animation: ${fadeIn} 2s ease-in-out;
@@ -132,12 +132,13 @@ const Buttondiv = styled.div`
   cursor: pointer;
   boxdiv {
     position: relative;
-    width: 10%;
-    height: 50%;
+    width: 150px;
+    height: 50px;
     border-radius: 15px;
     border: 3px solid rgba(255, 255, 255, 0.8);
     margin: 0px 3% 0px 3%;
     text-align: center;
+    padding: 0.5% 0px 0.5% 0px;
     span {
       font-size: 20px;
       color: white;
@@ -175,37 +176,40 @@ const Intorducediv = styled.div`
   display: flex;
   flex-direction: row;
   imgdiv {
-    margin: 3% 0px 0px 3%;
+    margin: 3% 0px 3% 3%;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 7px solid rgba(255, 255, 255, 0.8);
     padding: 5px 5px;
     align-items: center;
     img {
       position: absolute;
-      top: 5px;
-      left: 4px;
-      width: 125px;
-      height: 125px;
+      top: 7%;
+      left: 7%;
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
     }
   }
   nameboxdiv {
+    width: 40%;
     color: white;
+    /* background-color: aqua; */
     font-family: "Gowun Batang", serif;
     display: flex;
     flex-direction: column;
     namediv {
-      font-size: 50px;
-      margin: 6% 0px 0px 3%;
+      font-size: 30px;
+      margin: 6% 0px 0px 4%;
     }
     descriptiondiv {
       display: flex;
       flex-direction: column;
+
       font-size: 20px;
-      margin: 2% 0px 0px 3%;
+      margin: 2% 0px 0px 4%;
       writerdiv {
         margin: 1% 12% 0px 0px;
         text-align: right;
@@ -214,7 +218,7 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
-    margin: 3% 3%;
+    margin: 3% 0px 0px 3%;
   }
 
   idiv {
@@ -222,7 +226,7 @@ const Intorducediv = styled.div`
     margin-left: auto;
     padding: 3% 1%;
     a {
-      margin: 0px 10% 0px 5%;
+      margin: 0px 13% 0px 0px;
       i {
         color: white;
       }
