@@ -137,7 +137,7 @@ function Intor() {
             </contentdiv>
           )}
           {active === "교육" && (
-            <edudiv>
+            <edudiv isReqVisible={active === "교육"}>
               <imgdiv>
                 <imagenamediv>코드스테이츠 (Code States)</imagenamediv>
                 <imgcontentnamediv>기간</imgcontentnamediv>
@@ -239,6 +239,8 @@ const ScrollContainer = styled.div`
     flex-direction: row;
     width: auto;
     padding: 1% 1%;
+    animation: ${({ isReqVisible }) =>
+      isReqVisible ? "fadeOut 2s" : "fadeInLeft 2s"};
     img {
       width: auto;
       height: 30%;

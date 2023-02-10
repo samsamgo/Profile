@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import yadon from "../Asset/yadonchis.png";
 
 import Intro from "./Intro";
+import Project from "./Project";
 
 function Mypage() {
   const videoId = "XS-hdOnxeKQ";
@@ -98,7 +99,7 @@ function Mypage() {
           </boxdiv>
         </Buttondiv>
         {active === "Intro" && <Intro />}
-        {active === "Pro" && <div>123123</div>}
+        {active === "Pro" && <Project />}
         {active === "Video" && <div>123123</div>}
         {active === "Loca" && <div>123123</div>}
       </Myprofile>
