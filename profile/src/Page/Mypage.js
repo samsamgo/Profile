@@ -4,6 +4,7 @@ import yadon from "../Asset/yadonchis.png";
 
 import Intro from "./Intro";
 import Project from "./Project";
+import Mappage from "./Mappage";
 
 function Mypage() {
   const videoId = "XS-hdOnxeKQ";
@@ -101,7 +102,7 @@ function Mypage() {
         {active === "Intro" && <Intro />}
         {active === "Pro" && <Project />}
         {active === "Video" && <div>123123</div>}
-        {active === "Loca" && <div>123123</div>}
+        {active === "Loca" && <Mappage />}
       </Myprofile>
     </Mypagediv>
   );
@@ -114,6 +115,7 @@ const fadeIn = keyframes` from { opacity: 0; } to { opacity: 1; }`;
 const Mypagediv = styled.div`
   width: 100vw;
   height: 100vh;
+  background-color: white;
   background-image: ${({ background }) => ` url(${background})` || "white"};
   background-size: cover;
   padding: 5% 13%;

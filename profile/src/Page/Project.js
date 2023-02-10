@@ -13,7 +13,7 @@ function Project() {
             <img src={logo} alt="logo_img" />
             <pronamediv>프로젝트 : 아모나(AMOONA)</pronamediv>
             <proteamdiv>기간</proteamdiv>
-            <prodatediv>📅2023.1.1 - 2023.1.31</prodatediv>
+            <prodatediv>📅2023.1.03 - 2023.1.31</prodatediv>
             <proteamdiv>코드스테이츠</proteamdiv>
             <prodatediv>👷파이널 프로젝트 (7인/4주)</prodatediv>
           </logodiv>
