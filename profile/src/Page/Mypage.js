@@ -216,6 +216,8 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
+    width: 15%;
+    height: auto;
     iframe {
       width: 240px;
       height: 150px;
