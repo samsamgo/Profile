@@ -155,9 +155,10 @@ const Projectdiv = styled.div`
   padding: 3% 2%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   font-family: "Jua", sans-serif;
   margin: 1% 1%;
+  overflow: auto;
 `;
 
 const FirstProjectdiv = styled.div`
@@ -171,9 +172,10 @@ const FirstProjectdiv = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 2rem;
     img {
-      width: 120px;
-      height: 120px;
+      width: 5rem;
+      height: 5rem;
       opacity: 0.8;
       border-radius: 15px;
       border: 5px solid rgba(255, 255, 255, 0.8);
@@ -181,23 +183,24 @@ const FirstProjectdiv = styled.div`
     }
     pronamediv {
       margin-top: 4%;
-      font-size: 25px;
+      font-size: 1.2rem;
     }
     prodatediv {
       margin-top: 1%;
-      font-size: 15px;
+      font-size: 0.7rem;
     }
     proteamdiv {
       margin-top: 4%;
-      font-size: 20px;
+      font-size: 1rem;
     }
   }
   prodescritiondiv {
     display: flex;
     flex-direction: column;
-    font-size: 15px;
+    font-size: 0.7rem;
+
     discriptdiv {
-      font-size: 20px;
+      font-size: 1rem;
       margin-top: 4%;
     }
     linkdiv {
@@ -220,12 +223,14 @@ const SecondProjectdiv = styled(FirstProjectdiv)`
   flex-direction: row;
   animation: ${({ isReqVisible }) =>
     isReqVisible ? "fadeInLeft 2s" : "fadeInRight 2s"};
+  logodiv {
+    line-height: 1.5rem;
+  }
   prodescritiondiv {
-    line-height: 31px;
+    line-height: 1.5rem;
     discriptdiv {
-      font-size: 20px;
+      font-size: 1rem;
       margin-top: 6%;
-      font-size: 20px;
     }
   }
 `;

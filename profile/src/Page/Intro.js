@@ -99,7 +99,7 @@ function Intor() {
             </pofilestackdiv>
           )}
           {active === "가치" && (
-            <contentdiv
+            <contentdiv1
               ref={scrollContainerRef}
               isReqVisible={active === "가치"}
             >
@@ -134,7 +134,7 @@ function Intor() {
                 공유하고 <stdiv1>함께</stdiv1> 문제를 해결해가는 조직 문화를
                 선호합니다.
               </Contentdiv>
-            </contentdiv>
+            </contentdiv1>
           )}
           {active === "교육" && (
             <edudiv isReqVisible={active === "교육"}>
@@ -197,16 +197,16 @@ const ScrollContainer = styled.div`
     profilediv {
       display: flex;
       flex-direction: column;
-      font-size: 22px;
-      line-height: 50px;
-      word-spacing: 10px;
+      font-size: 5rem;
+      line-height: 3rem;
+      word-spacing: 0.2rem;
     }
     stackdiv {
       display: flex;
       flex-direction: row;
-      font-size: 20px;
+      font-size: 5rem;
       margin: 0px 2%;
-      line-height: 25px;
+      line-height: 2rem;
       img {
         width: 50%;
         height: auto;
@@ -216,19 +216,18 @@ const ScrollContainer = styled.div`
         display: flex;
         flex-direction: column;
         sskilldiv {
-          margin-bottom: 6%;
+          margin-bottom: 3%;
         }
       }
     }
   }
-  contentdiv {
+  contentdiv1 {
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: auto;
-    font-size: 40px;
-    line-height: 60px;
-    word-spacing: 10px;
+    line-height: 3rem;
+    word-spacing: 0.2rem;
     animation: ${({ isReqVisible }) =>
       isReqVisible ? "fadeOut 2s" : "fadeInLeft 2s"};
   }
@@ -247,37 +246,38 @@ const ScrollContainer = styled.div`
       opacity: 0.8;
       border-radius: 15px;
       border: 5px solid rgba(255, 255, 255, 0.8);
-      margin: 10% 0px 0px 6%;
+      margin: 10% 0px 0px 0px;
     }
     imgdiv {
       display: flex;
       flex-direction: column;
-      font-size: 20px;
-      line-height: 35px;
-
       padding: 0px 1%;
       imagenamediv {
-        font-size: 40px;
+        font-size: 2rem;
         margin: 3% 3%;
       }
       imgcontentnamediv {
         padding-left: 4%;
-        font-size: 25px;
+        font-size: 1.2rem;
         margin-top: 3%;
+        line-height: 1.5rem;
       }
       imgcontentdiv {
         padding-left: 10%;
         margin-top: 1%;
+        font-size: 0.9rem;
+        line-height: 1.2rem;
       }
     }
   }
 `;
 const Contentdiv = styled.div`
   margin: 5% 2% 5% 0px;
+  font-size: 2rem;
   color: ${({ div1Visible }) =>
     div1Visible ? "rgba(255, 255, 255, 0.3)" : "black"};
   stdiv1 {
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: bolder;
   }
 `;
@@ -291,16 +291,17 @@ const Buttondiv = styled.div`
   align-items: center;
   boxdiv {
     position: relative;
-    width: 70px;
-    height: 70px;
+    display: flex;
+    flex-grow: 1;
+    width: 60%;
     border-radius: 15px;
     border: 3px solid rgba(255, 255, 255, 0.8);
-    margin: 7% 2%;
+    margin: 6% 2%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     span {
-      position: absolute;
-      top: 25%;
-      left: 20%;
-      font-size: 20px;
+      font-size: 1rem;
       color: white;
     }
     &:hover {
@@ -311,12 +312,11 @@ const Buttondiv = styled.div`
       align-items: center;
       font-weight: bold;
       background-color: rgba(220, 220, 255, 0.6);
-      width: 120px;
-      height: 120px;
+      display: flex;
+      flex-grow: 2;
       border: 5px solid rgba(255, 255, 255, 0.8);
       span {
-        top: 35%;
-        left: 32%;
+        font-size: 2rem;
       }
     }
   }

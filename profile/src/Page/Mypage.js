@@ -59,17 +59,17 @@ function Mypage() {
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-solid fa-blog fa-2x"></i>
+              <i class="fa-solid fa-blog">blog</i>
             </a>
             <a
               href="https://github.com/samsamgo"
               target="_blank"
               rel="noreferrer"
             >
-              <i class="fa-brands fa-github fa-2x"></i>
+              <i class="fa-brands fa-github fa-2x">github</i>
             </a>
             <a href="mailto:jku2659@gmail.com">
-              <i class="fa-solid fa-envelope fa-2x"></i>
+              <i class="fa-solid fa-envelope fa-2x">email</i>
             </a>
           </idiv>
         </Intorducediv>
@@ -110,8 +110,6 @@ function Mypage() {
 
 export default Mypage;
 
-const fadeIn = keyframes` from { opacity: 0; } to { opacity: 1; }`;
-
 const Mypagediv = styled.div`
   width: 100vw;
   height: 100vh;
@@ -121,29 +119,28 @@ const Mypagediv = styled.div`
   padding: 5% 13%;
   transition: background-image 2s ease-in-out;
   justify-content: center;
-  animation: ${fadeIn} 2s ease-in-out;
   align-items: center;
 `;
 
 const Buttondiv = styled.div`
   width: 100%;
-  height: 10%;
+  height: 2.5rem;
   border: none;
   display: flex;
   flex-direction: row;
   padding: 0px 3%;
   cursor: pointer;
+  margin: 1% 0px;
   boxdiv {
-    position: relative;
-    width: 150px;
-    height: 50px;
+    width: 10rem;
+    height: 100%;
     border-radius: 15px;
     border: 3px solid rgba(255, 255, 255, 0.8);
     margin: 0px 3% 0px 3%;
     text-align: center;
-    padding: 0.5% 0px 0.5% 0px;
+    padding-top: 0.3rem;
     span {
-      font-size: 20px;
+      font-size: 1rem;
       color: white;
     }
     &:hover {
@@ -181,18 +178,18 @@ const Intorducediv = styled.div`
   imgdiv {
     margin: 3% 0px 3% 3%;
     position: relative;
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 7px solid rgba(255, 255, 255, 0.8);
     padding: 5px 5px;
     align-items: center;
     img {
       position: absolute;
-      top: 7%;
-      left: 7%;
-      width: 100px;
-      height: 100px;
+      top: 6%;
+      left: 6%;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
     }
   }
@@ -204,34 +201,38 @@ const Intorducediv = styled.div`
     display: flex;
     flex-direction: column;
     namediv {
-      font-size: 30px;
+      font-size: 3rem;
       margin: 6% 0px 0px 4%;
     }
     descriptiondiv {
+      width: 90%;
       display: flex;
       flex-direction: column;
-
-      font-size: 20px;
+      font-size: 1rem;
       margin: 2% 0px 0px 4%;
+      padding: 0px 0px 0px 6%;
       writerdiv {
-        margin: 1% 12% 0px 0px;
+        margin: 1% 20% 0px 0px;
         text-align: right;
-        font-size: 25px;
+        font-size: 0.7rem;
       }
     }
   }
   videodiv {
     margin: 3% 0px 0px 3%;
   }
-
   idiv {
     width: 20%;
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     padding: 3% 1%;
     a {
-      margin: 0px 13% 0px 0px;
+      margin: 4% 5%;
+
       i {
         color: white;
+        font-size: 1.2rem;
       }
     }
   }
