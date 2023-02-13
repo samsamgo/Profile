@@ -175,28 +175,27 @@ const Intorducediv = styled.div`
   border: 5px solid rgba(255, 255, 255, 0.8); */
   display: flex;
   flex-direction: row;
+  position: relative;
+
   imgdiv {
     margin: 3% 0px 3% 3%;
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 135px;
+    height: 135px;
     border-radius: 50%;
     border: 7px solid rgba(255, 255, 255, 0.8);
     padding: 5px 5px;
-    align-items: center;
     img {
       position: absolute;
-      top: 6%;
-      left: 6%;
-      width: 120px;
-      height: 120px;
+      top: 7%;
+      left: 7%;
+      width: 105px;
+      height: 105px;
       border-radius: 50%;
     }
   }
   nameboxdiv {
     width: 40%;
-    color: white;
-    /* background-color: aqua; */
     font-family: "Gowun Batang", serif;
     display: flex;
     flex-direction: column;
@@ -219,16 +218,19 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
-    margin: 3% 0px 0px 3%;
+    margin: 3% 3%;
   }
   idiv {
-    width: 20%;
+    position: absolute;
+    right: 5%;
+    top: 3%;
+    width: 10%;
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    padding: 3% 1%;
+    align-items: center;
+    padding: 3% 0px;
     a {
-      margin: 4% 5%;
+      margin: 5% 0px;
       i {
         color: white;
         font-size: 1.2rem;
