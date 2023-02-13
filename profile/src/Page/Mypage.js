@@ -34,7 +34,7 @@ function Mypage() {
       <Myprofile>
         <Intorducediv>
           <imgdiv>
-            <img src={yadon} alt="imgage" />
+            <img src={yadon} alt="imgage" width="105px" height="105px" />
           </imgdiv>
           <nameboxdiv>
             <namediv>Jang kyeung Uk</namediv>
@@ -45,8 +45,8 @@ function Mypage() {
           </nameboxdiv>
           <videodiv>
             <iframe
-              width="80%"
-              height="auto"
+              width="240px"
+              height="150px"
               src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -189,8 +189,6 @@ const Intorducediv = styled.div`
       position: absolute;
       top: 7%;
       left: 7%;
-      width: 105px;
-      height: 105px;
       border-radius: 50%;
     }
   }
