@@ -117,7 +117,7 @@ const Mypagediv = styled.div`
   background-image: ${({ background }) => ` url(${background})` || "white"};
   background-size: cover;
   padding: 5% 13%;
-  transition: background-image 2s ease-in-out;
+  transition: background-image 4s ease-in-out 1s;
   justify-content: center;
   align-items: center;
 `;
@@ -229,7 +229,6 @@ const Intorducediv = styled.div`
     padding: 3% 1%;
     a {
       margin: 4% 5%;
-
       i {
         color: white;
         font-size: 1.2rem;
