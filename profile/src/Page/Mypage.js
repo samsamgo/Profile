@@ -218,8 +218,7 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
-    width: 15%;
-    margin: 3% 3%;
+    margin: 3% 3% 0px 3%;
   }
   idiv {
     position: absolute;
