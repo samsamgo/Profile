@@ -26,67 +26,17 @@ function Intor() {
   }, [scrollContainerRef, active]);
 
   useEffect(() => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth <= 1326) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
-    } else if (windowWidth > 1326 && windowWidth <= 1526) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
-    } else if (windowWidth > 1526 && windowWidth <= 1827) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
-    } else if (windowWidth > 1526 && windowWidth <= 1827) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
-    } else if (windowWidth > 1827 && windowWidth <= 2190) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
-    } else if (windowWidth > 2190) {
-      if (scrollPosition < 133) {
-        setdiv1Visble(false);
-      } else if (scrollPosition > 133 && scrollPosition < 350) {
-        setdiv1Visble(true);
-        setdiv2Visble(false);
-      } else {
-        setdiv2Visble(true);
-        setdiv3Visble(false);
-      }
+    if (scrollPosition < 133) {
+      setdiv1Visble(false);
+      setdiv2Visble(true);
+    } else if (scrollPosition > 133 && scrollPosition < 400) {
+      setdiv1Visble(true);
+      setdiv2Visble(false);
+      setdiv3Visble(true);
+    } else {
+      setdiv1Visble(false);
+      setdiv2Visble(true);
+      setdiv3Visble(false);
     }
 
     console.log(scrollPosition);
@@ -150,21 +100,23 @@ function Intor() {
               isReqVisible={active === "가치"}
             >
               <Contentdiv div1Visible={div1Visble}>
-                <stdiv1>개발자의 가치는</stdiv1>
-                사용자의 만족도의 의해 정해짐을 정확히 인지하고 있으며
-                여러사람의 관점을 항상 생각하고 세세한 부분까지도{" "}
-                <stdiv1>피드백</stdiv1> 받는 것을 선호합니다.
+                개발자로서 사용자의 <stdiv1>만족도가</stdiv1> 가장 중요하다는
+                것을 인지하고 있으며, 이를 실현하기 위해 사용자의 요구사항과
+                <stdiv1>피드백</stdiv1>을 항상 고려합니다. 또한, 다양한
+                관점에서의 피드백을 받아 세세한 부분까지 신경쓰며 사용자의
+                <stdiv1>만족도를</stdiv1> 고려합니다.
               </Contentdiv>
               <Contentdiv div1Visible={div2Visble}>
-                현재의 문제뿐 아니라 <stdiv1>미래의</stdiv1> 생길 문제들까지
-                고려해가며 책임감을 느끼고 <stdiv1>주도적으로</stdiv1> 개발하는
-                것을 선호하고 있습니다.
+                저는 문제 해결에 있어서 <stdiv1>미래의 가능성을</stdiv1>
+                고려하며, 책임감과 주도성을 가지고 <stdiv1>주도적</stdiv1>으로
+                개발하는 것을 선호합니다.
               </Contentdiv>
               <Contentdiv div1Visible={div3Visble}>
-                개인 간의 역량 차이가 팀의 협력에 미치는 나쁜 영향에 대해 아주
-                잘 알고 있으며 <stdiv1>메타인지적 공부 방법</stdiv1>을 통해
-                블로그에 <stdiv1>170</stdiv1>개의 개발일지( 후기 포함)를
-                작성하며 노력하고 있습니다.
+                저는 개인의 성장과 함께 팀의 성장을 위해 스스로의 역량을
+                계속해서 <stdiv1>향상</stdiv1>시키고, 팀 내에서 지식을 공유하며
+                <stdiv1>함께</stdiv1> 발전할 수 있는 문화를 만들어 나가고자
+                합니다. 이러한 노력을 통해, 팀 내에서 각자의 장점을 살리고 서로
+                보완하며, 더 나은 <stdiv1>협력</stdiv1>을 이끌어내고자 합니다.
               </Contentdiv>
             </contentdiv1>
           )}
@@ -176,10 +128,7 @@ function Intor() {
                 <imgcontentdiv>📅2022.08.19 - 2023.02.10</imgcontentdiv>
                 <imgcontentnamediv>커리큘럼</imgcontentnamediv>
                 <imgcontentdiv>
-                  📍Javascript 기반으로 풀스택 과정 학습
-                </imgcontentdiv>
-                <imgcontentdiv>
-                  📍프론트엔드는 React, 백엔드는 Node.js 학습
+                  📍Javascript 기반으로 Fornt-end 과정 학습
                 </imgcontentdiv>
                 <imgcontentdiv>
                   📍20주 동안 매일 알고리즘 문제 풀이
@@ -309,7 +258,9 @@ const Contentdiv = styled.div`
   color: ${({ div1Visible }) =>
     div1Visible ? "rgba(255, 255, 255, 0.3)" : "black"};
   stdiv1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    color: ${({ div1Visible }) =>
+      div1Visible ? "rgba(255, 255, 255, 0.6)" : "rgba(1, 143, 244, 0.6)"};
     font-weight: bolder;
   }
 `;
