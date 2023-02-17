@@ -99,7 +99,7 @@ function Mypage() {
         </Buttondiv>
         {active === "Intro" && <Intro />}
         {active === "Pro" && <Project />}
-        {active === "Video" && <div>123123</div>}
+        {active === "Video" && <div></div>}
         {active === "Loca" && <Mappage />}
       </Myprofile>
     </Mypagediv>
@@ -216,11 +216,11 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
-    width: 15%;
-    height: auto;
+    width: auto;
+    height: 80%;
     iframe {
-      width: 240px;
-      height: 150px;
+      width: auto;
+      height: 100%;
     }
 
     margin: 3% 3% 0px 3%;
