@@ -216,10 +216,28 @@ const Intorducediv = styled.div`
     }
   }
   videodiv {
-    width: auto;
-    height: 80%;
+    @media screen and (max-width: 1326px) {
+      width: 180px;
+      height: 120px;
+    }
+    @media screen and (min-width: 1326px) and (max-width: 1526px) {
+      width: 220px;
+      height: 140px;
+    }
+    @media screen and (min-width: 1526px) and (max-width: 1826px) {
+      width: 235px;
+      height: 150px;
+    }
+    @media screen and (min-width: 1827px) and (max-width: 2189px) {
+      width: 270px;
+      height: 160px;
+    }
+    @media screen and (min-width: 2190px) {
+      width: 300px;
+      height: 180px;
+    }
     iframe {
-      width: auto;
+      width: 100%;
       height: 100%;
     }
 

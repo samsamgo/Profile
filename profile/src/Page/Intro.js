@@ -7,8 +7,6 @@ function Intor() {
   const [div1Visble, setdiv1Visble] = useState(false);
   const [div2Visble, setdiv2Visble] = useState(true);
   const [div3Visble, setdiv3Visble] = useState(true);
-  const [div4Visble, setdiv4Visble] = useState(true);
-  const [div5Visble, setdiv5Visble] = useState(true);
   const scrollContainerRef = useRef(null);
 
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -28,21 +26,69 @@ function Intor() {
   }, [scrollContainerRef, active]);
 
   useEffect(() => {
-    if (scrollPosition < 133) {
-      setdiv1Visble(false);
-    } else if (scrollPosition > 133 && scrollPosition < 350) {
-      setdiv1Visble(true);
-      setdiv2Visble(false);
-    } else if (scrollPosition > 350 && scrollPosition < 540) {
-      setdiv2Visble(true);
-      setdiv3Visble(false);
-    } else if (scrollPosition > 540 && scrollPosition < 950) {
-      setdiv3Visble(true);
-      setdiv4Visble(false);
-    } else {
-      setdiv4Visble(true);
-      setdiv5Visble(false);
+    const windowWidth = window.innerWidth;
+    if (windowWidth <= 1326) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
+    } else if (windowWidth > 1326 && windowWidth <= 1526) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
+    } else if (windowWidth > 1526 && windowWidth <= 1827) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
+    } else if (windowWidth > 1526 && windowWidth <= 1827) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
+    } else if (windowWidth > 1827 && windowWidth <= 2190) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
+    } else if (windowWidth > 2190) {
+      if (scrollPosition < 133) {
+        setdiv1Visble(false);
+      } else if (scrollPosition > 133 && scrollPosition < 350) {
+        setdiv1Visble(true);
+        setdiv2Visble(false);
+      } else {
+        setdiv2Visble(true);
+        setdiv3Visble(false);
+      }
     }
+
     console.log(scrollPosition);
   }, [scrollPosition]);
 
@@ -119,20 +165,6 @@ function Intor() {
                 잘 알고 있으며 <stdiv1>메타인지적 공부 방법</stdiv1>을 통해
                 블로그에 <stdiv1>170</stdiv1>개의 개발일지( 후기 포함)를
                 작성하며 노력하고 있습니다.
-              </Contentdiv>
-              <Contentdiv div1Visible={div4Visble}>
-                개인적인 일보다는 비즈니스와 팀에 기여하는 일을
-                <stdiv1>최우선</stdiv1>
-                생각하는 마인드 셋을 중요하다고 생각하고 팀 간의 업무를
-                분업화하는 과정에서 발생하는
-                <stdiv1>비효율적인 프로세스를 개선</stdiv1>하는 것은 팀 간에
-                협업을 위해 무엇보다 <stdiv1>중요하다고</stdiv1>
-                생각합니다.
-              </Contentdiv>
-              <Contentdiv div1Visible={div5Visble}>
-                서로 <stdiv1>수평한</stdiv1> 관계속에서 일원들에게 모든 것을
-                공유하고 <stdiv1>함께</stdiv1> 문제를 해결해가는 조직 문화를
-                선호합니다.
               </Contentdiv>
             </contentdiv1>
           )}
