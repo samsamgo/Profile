@@ -26,10 +26,10 @@ function Intor() {
   }, [scrollContainerRef, active]);
 
   useEffect(() => {
-    if (scrollPosition < 133) {
+    if (scrollPosition < 127) {
       setdiv1Visble(false);
       setdiv2Visble(true);
-    } else if (scrollPosition > 133 && scrollPosition < 400) {
+    } else if (scrollPosition > 127 && scrollPosition < 365) {
       setdiv1Visble(true);
       setdiv2Visble(false);
       setdiv3Visble(true);
@@ -128,16 +128,20 @@ function Intor() {
                 <imgcontentdiv>📅2022.08.19 - 2023.02.10</imgcontentdiv>
                 <imgcontentnamediv>커리큘럼</imgcontentnamediv>
                 <imgcontentdiv>
-                  📍Javascript 기반으로 Fornt-end 과정 학습
+                  📍React로 웹 개발을 학습하며 컴포넌트 기반 설계, 가상 돔, 상태
+                  관리 등을 배웠고, 이를 실제 프로젝트에 적용할 수 있습니다.
                 </imgcontentdiv>
                 <imgcontentdiv>
-                  📍20주 동안 매일 알고리즘 문제 풀이
+                  📍파트너와 함께 실습 진행(페어 프로그래밍)을 통해 협업 능력을
+                  향상시키고, 이를 토대로 깃 사용법과 프로젝트에서 팀원과
+                  협력하는 방법을 익히게 되었습니다.
                 </imgcontentdiv>
                 <imgcontentdiv>
-                  📍20주 동안 매일 강도 높은 과제 수행 및 페어 프로그래밍과 코드
-                  리뷰 경험
+                  📍프로젝트 경험을 통해 백엔드와의 소통 방법을 익숙하게 다룰 수
+                  있고, Rest API를 이용한 서버 API 통신에 능숙합니다. 이를
+                  기반으로 프론트엔드와 백엔드 간의 데이터 흐름을 원활하게
+                  구축할 수 있습니다.
                 </imgcontentdiv>
-                <imgcontentdiv>📍협업 프로젝트 2회 진행</imgcontentdiv>
               </imgdiv>
               <img
                 src="data:image/png;base64,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"
@@ -245,8 +249,8 @@ const ScrollContainer = styled.div`
       }
       imgcontentdiv {
         padding-left: 10%;
-        margin-top: 1%;
-        font-size: 0.9rem;
+        margin-top: 3%;
+        font-size: 1.2rem;
         line-height: 1.2rem;
       }
     }

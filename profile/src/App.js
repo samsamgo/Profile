@@ -11,20 +11,26 @@ const GlobalStyle = createGlobalStyle`
     padding: 0px 0px 0px 0px;
     box-sizing: border-box;
 
-    @media screen and (max-width: 1326px) {
-   font-size:10px;
+    @media screen and (max-width: 1126px) {
+   font-size:11px;
+    }
+    @media screen and (min-width: 1126px) and (max-width: 1226px) {
+    font-size:13px;
+    }
+        @media screen and (min-width: 1226px) and (max-width: 1326px) {
+    font-size:14px;
     }
     @media screen and (min-width: 1326px) and (max-width: 1526px) {
-    font-size:12px;
+    font-size:15px;
     }
     @media screen and (min-width: 1526px)and (max-width: 1827px) {
-      font-size: 14px;
+      font-size: 17px;
     }
     @media screen and (min-width: 1827px)and (max-width: 2189px) {
-      font-size: 16px;
+      font-size: 19px;
     }
     @media screen and (min-width: 2190px) {
-      font-size: 20px;
+      font-size: 21px;
     }
   }
 
